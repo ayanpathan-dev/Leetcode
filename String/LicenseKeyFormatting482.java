@@ -1,3 +1,5 @@
+package String;
+
 import java.util.Scanner;
 
 public class LicenseKeyFormatting482 {
@@ -5,33 +7,35 @@ public class LicenseKeyFormatting482 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter String =");
         String word =sc.next();
-        System.out.println(licenseKeyFormatting(word));
+        System.out.println(licenseKeyFormatting("word",4));
         sc.close();
     }
     
         
-       public String licenseKeyFormatting(String s, int k) {
+       public static String licenseKeyFormatting(String s, int k) {
+        
         StringBuilder str = new StringBuilder();
         int cnt=0;
         for(int i =0 ;i<s.length();i++){
             if(s.charAt(i)!='-'){
-                str.append(s.charAt(i).toUppercase);
+                str.append(Character.toUpperCase(s.charAt(i)));
                 cnt++;
             }
         }
                 StringBuilder str2 = new StringBuilder();
 
-        string rev = str.reverse().toString();
+        String rev = str.reverse().toString();
         int j=k;
         for(int i =0;i<cnt;i++){
-            if(i==j){
+            if(i==j){ 
                 str2.append('-');
-                j=K+j;
+                str2.append(rev.charAt(i));
+                j=j+k;
             }else{
-               str2.append(i);
+               str2.append(rev.charAt(i));
             }
         }
-        return str2.reversse().toString();
+        return str2.reverse().toString();
         }
         
     }

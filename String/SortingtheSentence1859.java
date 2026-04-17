@@ -1,3 +1,5 @@
+package String;
+
 import java.util.Scanner;
 
 public class SortingtheSentence1859 {
