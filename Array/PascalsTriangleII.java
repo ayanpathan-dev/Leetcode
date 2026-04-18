@@ -4,7 +4,6 @@ import java.util.List;
 public class PascalsTriangleII {
      public List<Integer> getRow(int rowIndex) {
 
-        List<List<Integer>> main = new ArrayList<>();
         List<Integer>prev = new ArrayList<>();
 
         for(int i =1 ;i<=rowIndex+1;i++){
